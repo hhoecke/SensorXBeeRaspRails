@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  tempval: 1.5
+  captured: 2013-04-29 16:13:40
+
+two:
+  name: MyString
+  tempval: 1.5
+  captured: 2013-04-29 16:13:40

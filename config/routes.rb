@@ -1,4 +1,11 @@
 SensorNetwork::Application.routes.draw do
+  get "sensor_view/live"
+
+  get "sensor_view/history"
+
+  resources :sensors
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
