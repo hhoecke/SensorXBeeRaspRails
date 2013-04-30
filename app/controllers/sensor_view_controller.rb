@@ -14,7 +14,8 @@ class SensorViewController < ApplicationController
 		puts "Wait"
 	end
 	#print packet in Hex and attach starting point in front
-	render :text =>"{7e#{ser.read(21).unpack('H*')}}"
+	render :text =>"{7e#{ser.read(44).unpack('H*')}}"
+	#Sensor.new(:captured =>"2013-04-29 14:20:00 +0200", :name =>"Frontpanel", :tempval =>"35,9")
   end
 
   def history
