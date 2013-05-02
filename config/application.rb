@@ -1,6 +1,7 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
+require 'serialport'
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
@@ -23,7 +24,7 @@ module SensorNetwork
 
     # Activate observers that should always be running.
     # config.active_record.observers = :cacher, :garbage_collector, :forum_observer
-    config.serial_port = SerialPort.new "/dev/cu.usbserial-AH01D4U5", 9600, 8, 1, SerialPort::NONE 
+    #config.serial_port = SerialPort.new "/dev/cu.usbserial-AH01D4U5", 9600, 8, 1, SerialPort::NONE 
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.

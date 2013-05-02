@@ -2,11 +2,11 @@
 #
 # It's helpful, but not entirely necessary to understand cron before proceeding.
 # http://en.wikipedia.org/wiki/Cron
-common_schedule = File.expand_path('../common_schedule.rb', __FILE__)
-self.instance_eval File.read(common_schedule), common_schedule
+#common_schedule = File.expand_path('../common_schedule.rb', __FILE__)
+#self.instance_eval File.read(common_schedule), common_schedule
 # Example:
 #
- set :output "log/whenever.log"
+ set :output, "log/whenever.log"
 #
  every 2.minutes do
    runner "SensorViewController.live", environment => "development"
