@@ -1,3 +1,3 @@
 class Sensor < ActiveRecord::Base
-  attr_accessible :captured, :name, :tempval
+  attr_accessible :name, :tempval
 end

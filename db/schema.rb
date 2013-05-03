@@ -16,7 +16,6 @@ ActiveRecord::Schema.define(:version => 20130429141340) do
   create_table "sensors", :force => true do |t|
     t.string   "name"
     t.float    "tempval"
-    t.datetime "captured"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
