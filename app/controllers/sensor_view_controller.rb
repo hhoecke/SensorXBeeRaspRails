@@ -1,37 +1,41 @@
 class SensorViewController < ApplicationController
-	#define instance variables
-	class << self
-		attr_accessor :Serialout, :SerialinHex
+
+		#initialize instance var.
+	def initialize
+		@value = SerialPort.new "/dev/cu.usbserial-AH01D4U5", 9600, 8, 1, SerialPort::NONE
+		@dbval = ""
+		end
+	#getter value
+	def value
+		@value
 	end
-
-	class Sens
-		def initialize
-			@value = SerialPort.new "/dev/cu.usbserial-AH01D4U5", 9600, 8, 1, SerialPort::NONE 
-		end
-
-		def value
-			@value
-		end
-
-		def get_value
-			@value.read(22)
-		end
+	#getter dbval
+	def dbval
+		@dbval
 	end
-
-	
+	#read from serialport
+	def read_value
+		wait for the beginning of an api packet
+		while ser.read(1)!="~" do
+		 	puts "Wait"
+		end
+		@value.read(22)
+	end
+	#setter
+	def write_dbval
+		@dbval = Xbee.new(:name =>"Frontpanel", :tempval => @dbval.read_value)
+	end
 
 	#live view
-  def live
-  	
-	meine_sensr = Sens.new
+	def live
+	end
 
-	a = meine_sensr.get_value
-	puts meine_sensr.value
-	
-  end
+	def show
+  		@xbee = Xbee.all
+	end
 
-  def history
-  end
+	def history
+	end	
 end
 
 

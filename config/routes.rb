@@ -3,6 +3,8 @@ SensorNetwork::Application.routes.draw do
 
   get "sensor_view/history"
 
+  get "sensor_view/show"
+
   resources :sensors
 
 
@@ -55,7 +57,8 @@ SensorNetwork::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'sensor_view#show'
+
 
   # See how all your routes lay out with "rake routes"
 

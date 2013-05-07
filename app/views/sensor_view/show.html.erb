@@ -1,0 +1,17 @@
+<p>
+<table>
+<% @xbee.each do |xbee| %>
+  <tr>
+  	<td><b>Name:</b></td>    
+    <td><%= xbee.name %></td>
+  </tr>
+  <tr>
+   	<td><b>Value:</b></td>
+    <td><%= xbee.tempval %></td>
+  </tr>
+
+
+<% end %>
+</table>
+</p>
+

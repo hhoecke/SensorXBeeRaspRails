@@ -11,9 +11,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130429141340) do
+ActiveRecord::Schema.define(:version => 20130507135442) do
 
-  create_table "sensors", :force => true do |t|
+  create_table "xbees", :force => true do |t|
     t.string   "name"
     t.float    "tempval"
     t.datetime "created_at", :null => false
